@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.item-menu {
+    text-decoration: none;
+    font-size: 18px;
+    color: #15171A;
+}
+.item-menu:hover {
+    text-decoration: underline;
+}
+.menu-icon {
+    display: inline-block;
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: darkolivegreen;
+    text-transform: uppercase;
+}
+.article-title {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: darkblue;
+    text-align: center;
+    font-size: 19px;
+    display: inline-block;
+    margin-bottom: 14px;
+    margin-top: 20px;
+    text-align: left;
+}
+.under {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 8px;
+    color: gray;
+}
+.under:hover {
+    color: darkgray;
+}
+.main-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+    color: dimgray;
+}
+
+/* // Press footer to the bottom */
+html,
+body,
+#__next,
+.site-cont {
+	height: 100%;
+}
+/* // wraper */
+.site {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+/* //content */
+.content-wraper {
+	flex: 1 0 auto;
+}
+/* //footer */
+.site-footer {
+    flex: 0 0 auto;
+    margin-right: -30px;
+}
+/* //End of Press footer to the bottom */
+
+.spiner-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 240px;
+}
+/* to corect some strange margin */
+.site {
+    margin-right: 30px;
+}
+
+.error-text {
+    font-size: 14px;
+    color: red;
+}
+
+.removed-post {
+    display: flex;
+    justify-content: center;
+    padding-top: 130px;
+}
