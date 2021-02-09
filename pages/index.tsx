@@ -4,9 +4,9 @@ import { bindActionCreators } from 'redux'
 import Link from 'next/link'
 import Layout from '../components/Layout'
 import { IPost, ILoder } from '../redux/types'
-import { NextFunctionComponent, NextContext } from 'next'
 import Spiner from '../components/Spiner'
 import { UL } from '../components/styledComponents/general'
+import React from 'react'
 
 interface IHomePops {
   fetchPosts: () => {}
@@ -14,7 +14,7 @@ interface IHomePops {
   loading: ILoder
 }
 
-const Home: NextFunctionComponent<IHomePops> = (props) => {
+const Home: React.FC<IHomePops> = (props) => {
   const { fetchedPosts, loading } = props
 
   if (loading) {
@@ -62,7 +62,7 @@ const mapStateToProps = (state) => ({
   loading: state.app.loading,
 })
 
-Home.getInitialProps = async (ctx: NextContext) => {
+Home.getInitialProps = async (ctx) => {
   if (!ctx.req) {
     return { post: null }
   }
