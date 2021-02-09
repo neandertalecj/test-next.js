@@ -8,7 +8,7 @@ type Props = {
   title?: string
 }
 
-const Layout: React.FC = ({ children, title = 'Page' }: Props) => (
+const Layout: React.FC<Props> = ({ children, title = 'Page' }) => (
   <div className="site-cont">
     <Head>
       <title>{title}</title>
