@@ -5,9 +5,7 @@ export const ADD_POST: string = 'POST/ADD_POST'
 export const DELETE_POST: string = 'DELETE_POST'
 export const ADD_COMMENT: string = 'POST/ADD_COMMENT'
 export const SHOW_LOADER: string = 'APP/SHOW_LOADER'
-export const HIDE_LOADER: string = 'APP/HIDE_LOADER '
-export const SHOW_ALERT: string = 'APP/SHOW_ALERT'
-export const HIDE_ALERT: string = 'APP/HIDE_ALERT'
+export const HIDE_LOADER: string = 'APP/HIDE_LOADER'
 /* eslint-enable */
 
 export type ILoder = boolean
