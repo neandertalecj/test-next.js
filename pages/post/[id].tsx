@@ -8,7 +8,7 @@ import { useState } from 'react'
 import Spiner from '../../components/Spiner'
 import { Textarea, InputBtn, UL, InputBtnDel } from '../../components/styledComponents/general'
 import axios from 'axios'
-
+/* eslint-disable */
 interface IPostPops {
   fetchPost: () => {}
   deletePost: () => {}
@@ -16,6 +16,7 @@ interface IPostPops {
   id: number
   loading: ILoder
 }
+/* eslint-enable */
 
 function Post(props: IPostPops) {
   const [state, setState] = useState({ textareaVal: '' })
@@ -58,13 +59,13 @@ function Post(props: IPostPops) {
         })
     }
   }
-
+/* eslint-disable */
   function handleDelete(id) {
     console.log(' handleDelete', id)
     props.deletePost(id)
     setHidden(true)
   }
-
+/* eslint-able */
   return (
     <Layout title="Post">
       <main style={{ display: hidden && 'none' }}>

@@ -7,6 +7,17 @@ import { IPost, ILoder } from '../redux/types'
 import Spiner from '../components/Spiner'
 import { UL } from '../components/styledComponents/general'
 import React from 'react'
+import { DocumentContext } from 'next/document'
+import { Store } from 'redux'
+
+/**
+ * NextDocumentContext with redux store context
+ * @tree
+ */
+export type AppContext = DocumentContext & {
+  readonly store: Store
+}
+type Props = {}
 
 interface IHomePops {
   fetchPosts: () => {}
@@ -14,7 +25,7 @@ interface IHomePops {
   loading: ILoder
 }
 
-const Home: React.FC<IHomePops> = (props) => {
+const Home = (props: IHomePops) => {
   const { fetchedPosts, loading } = props
 
   if (loading) {
@@ -62,10 +73,10 @@ const mapStateToProps = (state) => ({
   loading: state.app.loading,
 })
 
-Home.getInitialProps = async (ctx) => {
-  if (!ctx.req) {
-    return { post: null }
-  }
+Home.getInitialProps = async (ctx: AppContext): Promise<Props> => {
+  // if (!ctx.req) {
+  //   return { post: null }
+  // }
   await ctx.store.dispatch(fetchPosts())
 
   return {}
